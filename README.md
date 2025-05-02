@@ -1,9 +1,14 @@
-# journey-to-rustacean
-A personal log of my learning journey with Rust, from the basics to advanced concepts. This repository tracks my progress as I work toward becoming a true Rustacean, with daily commits, projects, and hands-on experiments.
+# Journey to Rustacean
 
-What’s Inside:
+A personal log of my learning journey with Rust, from the basics to advanced concepts. This repository tracks my progress as I work toward becoming a true Rustacean 🦀, with daily commits, mini-projects, and hands-on experiments.
 
-Learning notes: Key concepts I’ve learned while studying Rust.
-Practice projects: Small coding exercises and challenges.
-Progress updates: Daily/weekly commits tracking my journey.
-Resources: Links to tutorials, articles, and tools that have helped me along the way.
+## What's Inside:
+
+### Learning Notes:
+Key concepts I've learned while studying Rust.
+
+### Practice Projects:
+Small coding exercises and challenges to solidify my skills.
+
+### Progress Updates:
+Daily or weekly commits documenting my growth and milestones.
