@@ -1,0 +1,1 @@
+/Users/rishitmodi/Desktop/Rishit_Coding/journey-to-rustacean/a08_managing_growing_projects/resturant/target/debug/libresturant.rlib: /Users/rishitmodi/Desktop/Rishit_Coding/journey-to-rustacean/a08_managing_growing_projects/resturant/src/lib.rs
