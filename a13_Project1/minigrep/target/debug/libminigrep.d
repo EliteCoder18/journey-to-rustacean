@@ -1,0 +1,1 @@
+/Users/rishitmodi/Desktop/Rishit_Coding/journey-to-rustacean/a13_Project1/minigrep/target/debug/libminigrep.rlib: /Users/rishitmodi/Desktop/Rishit_Coding/journey-to-rustacean/a13_Project1/minigrep/src/lib.rs
