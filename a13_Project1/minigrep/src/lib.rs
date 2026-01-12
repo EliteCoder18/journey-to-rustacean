@@ -1,12 +1,21 @@
-pub fn search<'a>(query:&str,contents:&'a str)-> Vec<&'a str>{
-    let mut results = Vec::new();
-for lines in contents.lines(){//contents.lines returns lines in the content
-    if lines.contains(query){//here lines.contains searches for the query in the line
-        results.push(lines);//pushes it into vector if it matches the query
-    }
+// pub fn search<'a>(query:&str,contents:&'a str)-> Vec<&'a str>{
+//     let mut results = Vec::new();
+// for lines in contents.lines(){//contents.lines returns lines in the content
+//     if lines.contains(query){//here lines.contains searches for the query in the line
+//         results.push(lines);//pushes it into vector if it matches the query
+//     }
+// }
+// results
+// }
+//..................IMPLEMENTING ITERATORS
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
-results
-}
+
+
 pub fn search_case_insensitive<'a>(query:&str,contents:&'a str)-> Vec<&'a str>{
     let mut results=Vec::new();
     let query=query.to_lowercase();

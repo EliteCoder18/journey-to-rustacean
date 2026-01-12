@@ -6,12 +6,25 @@ use minigrep::{search,search_case_insensitive};
 
 fn main()
 {
-    let args :Vec<String>= env::args().collect();// args is used to iterate the sub commands typed or the text written in command line
+
+    // let args :Vec<String>= env::args().collect();
+    // args is used to iterate the sub commands typed or the text written in command line
     // then collect is used to make it together a string
-   let config=Config::build(&args).unwrap_or_else(|err|{
-    eprintln!("problem parsing arguments:{err}");
-    process::exit(1);
-   });
+
+
+//    let config=Config::build(&args).unwrap_or_else(|err|{
+//     eprintln!("problem parsing arguments:{err}");
+//     process::exit(1);
+//    });
+
+
+// ..........................Implementing closures and Iterators
+        let config=Config::build(env::args()).unwrap_or_else(|err|{
+        eprintln!("problem parsing arguments:{err}");
+        process::exit(1);
+        });
+
+
 
    if let Err(e)=run(config){
     eprintln!("Application error{e}");
@@ -42,15 +55,40 @@ pub struct Config{
     pub ignore_case:bool,
 }
 
-impl Config{
-   fn build(args: &[String])->Result<Config,&'static str> {
-    if args.len()<3{
-    return Err("not enough arguments");
-    }
-    let query=args[1].clone();
-    let file_path=args[2].clone();
-    let ignore_case=env::var("IGNORE_CASE").is_ok();
-    Ok(Config {query,file_path,ignore_case})
-}
-}
+// impl Config{
+//    fn build(args: &[String])->Result<Config,&'static str> {
+//     if args.len()<3{
+//     return Err("not enough arguments");
+//     }
+//     let query=args[1].clone();
+//     let file_path=args[2].clone();
+//     let ignore_case=env::var("IGNORE_CASE").is_ok();
+//     Ok(Config {query,file_path,ignore_case})
+// }
+// }
 
+impl Config{
+     fn build(
+        mut args: impl Iterator<Item = String>,
+    ) -> Result<Config, &'static str> {
+        args.next();//here we ignored the first value because the first value is name of the program
+
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string"),
+        };
+
+        let file_path = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a file path"),
+        };
+
+        let ignore_case = env::var("IGNORE_CASE").is_ok();
+
+        Ok(Config {
+            query,
+            file_path,
+            ignore_case,
+        })
+    }
+}
