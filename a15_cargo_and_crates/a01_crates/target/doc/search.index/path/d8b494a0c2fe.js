@@ -1,0 +1,1 @@
+rd_("A`[10,\"core::any\"]f[1,\"\"]f[0,\"\"]Ad[10,\"core::convert\"]0Aj[2,\"a15_cargo_and_crates\"]Ac[2,\"guessing_game\"]01Ac[10,\"core::borrow\"]Ba[6,\"core::result\",\"core::result\"]Ak[5,\"core::any\",\"core::any\"]5527Co[6,\"a15_cargo_and_crates::kinds\",\"a15_cargo_and_crates::kinds\"]Ca[6,\"guessing_game::kinds\",\"guessing_game::kinds\"]f[3,\"\"]210")

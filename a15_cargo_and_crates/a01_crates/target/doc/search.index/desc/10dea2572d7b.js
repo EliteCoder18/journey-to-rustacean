@@ -1,0 +1,1 @@
+rd_("ClCombines two primary colors in equal amounts to create a \xe2\x80\xa600AoReturns the argument unchanged.00000BaCalls <code>U::from(self)</code>.00000AmAdds one to the number given.0000000CdThe primary colors according to the RYB color model.00cArtCfThe secondary colors according to the RYB color model.001")
